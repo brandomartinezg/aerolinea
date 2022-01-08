@@ -1,0 +1,1 @@
+export const setCountriesAction = 'GET_COUNTRIES';

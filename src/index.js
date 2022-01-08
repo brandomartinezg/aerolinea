@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Airport from './components/Airport';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import configureStore from './configureStore';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore()}>
+      <Airport />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

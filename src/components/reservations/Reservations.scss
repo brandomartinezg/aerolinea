@@ -1,0 +1,24 @@
+.reservation-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1rem;
+    .rc-origin,
+    .rc-destination{
+        height: 100%;
+    }
+    .rc-origin{
+        .rco-text{
+            padding-bottom: 1rem;
+            font-size: 0.8rem;
+        }
+    }
+    .rc-destination{
+        .rcd-text{
+            padding-bottom: 1rem;
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.item-container{
+    height: auto;
+    width: 25rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.5rem 0.5rem 0.2rem #09090933;
+    font-family: Arial, Helvetica, sans-serif;
+    .ic-text-o-d{
+        display: flex;
+        padding: 1rem 1rem 0rem 1rem;
+        justify-content: space-between;
+        .ic-text-o,
+        .ic-text-d,
+        .ic-text-dash{
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+    .ic-text-date{
+        padding-left: 1rem;
+        color: #75757f;
+        padding-top: 0.5rem;
+    }
+    .ic-travellers-price{
+        padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        .ic-text-travellers{
+            display: flex;
+            .ict-children{
+                padding-left: 0.5rem;
+            }
+        }
+    }
+    .ic-total{
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+    .ic-actions{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}

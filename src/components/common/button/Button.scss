@@ -1,10 +1,29 @@
 .button-container{
     .bc-action{
-        background-color: lightseagreen;
         height: 2rem;
-        color: ivory;
         border: unset;
         border-radius: 0.5rem;
         width: 8rem;
+        cursor: pointer;
+        &.primary{
+            background-color: lightseagreen;
+            color: ivory;
+        }
+        &.secondary{
+            background-color: orange;
+            color: seashell;
+        }
+        &.tertiary{
+            background-color: #f71313;
+            color:ivory;
+        }
+        &:disabled{
+            background-color: #8a9190;
+            cursor:default;
+        }
+        &.xl{
+            height: 4rem;
+            width: 10rem;
+        }
     }
 }

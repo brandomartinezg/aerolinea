@@ -1,0 +1,75 @@
+.people-selector-container{
+    margin-left: 23%;
+    padding-top: 1.4rem;
+    .psc-text{
+        border: 0.1rem solid gray;
+        width: 18.6rem;
+        border-radius: 0.25rem;
+        background-color: white;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        .psc-iconperson{
+            height: 1.5rem;
+            width: 1.5rem;
+            padding-left: 0.3rem;
+            padding-right: 0.5rem;
+        }
+    }
+    .ps-selector{
+        box-shadow: 0 0.13rem 0.5rem 0 #09090933;
+        .ps-adult,
+        .ps-children{
+            display: flex;
+            background-color: white;
+            width: 18.6rem;
+            padding-top: 0.5rem;
+            padding-left: 0.4rem;
+            padding-bottom: 0.5rem;
+            .psa-plus,
+            .psa-minus,
+            .psc-plus,
+            .psc-minus{
+                height: 1.5rem;
+                width: 1.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .ps-adult{
+            .psa-minus{
+                margin-left: 6.5rem;
+                &.disabled{
+                    &:hover{
+                        cursor: no-drop;
+                    }
+                }
+            }
+            .psc-a-counter,
+            .psa-plus
+            {
+                padding-left: 1rem;
+            }
+        }
+        .ps-children{
+            .psc-minus{
+                padding-left: 7.35rem;
+                &.disabled{
+                    &:hover{
+                        cursor: no-drop;
+                    }
+                }
+            }
+            .psc-c-counter,
+            .psc-plus{
+                padding-left: 1rem;
+            }
+        }
+        &.hidden{
+            display: none;
+        }
+    }
+}

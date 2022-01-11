@@ -2,17 +2,56 @@
     height: 20%;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     border-bottom: 0.1rem solid gray;
-    .hc-airplane-icon{
-        height: 3rem;
-        // width: 30%;solo movil
-        padding-right: 1rem;
+    justify-content: space-between;
+    .hc-brand-container{
+        display: flex;
+        align-items: center;
+        .hc-airplane-icon{
+            height: 3rem;
+            // width: 30%;solo movil
+            padding-right: 1rem;
+            padding-left: 3rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .hc-text{
+            color: #0096FA;
+            // width: 70%; solo movil
+            font-family: Lato,sans-serif;
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
-    .hc-text{
-        color: #0096FA;
-        // width: 70%; solo movil
-        font-family: Lato,sans-serif;
+    .hc-shopping-cart-container{
+        display: flex;
+        .hc-shoppingcart-icon{
+            height: 2rem;
+            width: 2rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .hcs-notification{
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            background-color: red;
+            margin-right: 2rem;
+            display: flex;
+            justify-content: center;
+            .hcsn-text{
+                color: white;
+                &:hover{
+                    cursor: default;
+                }
+            }
+            &.hidden{
+                opacity: 0;
+            }
+        }
     }
 }

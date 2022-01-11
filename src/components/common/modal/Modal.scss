@@ -1,0 +1,42 @@
+.modal-content{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    &.show{
+        opacity: 1;
+        pointer-events: visible;
+        z-index: 1;
+    }
+    .mc-wrappercontent{
+        min-width: 20rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0rem 0rem 1rem 0.5rem #09090933;
+        position: relative;
+        .mc-modalHeader{
+            padding: 2rem 2rem 1rem 2rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+        .mc-modalBody{
+            padding: 2rem;
+        }
+        .mc-modalFooter{
+            display: flex;
+            padding: 2rem;
+        }
+    }
+}

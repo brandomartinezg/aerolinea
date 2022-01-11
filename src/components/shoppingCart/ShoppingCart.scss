@@ -1,0 +1,37 @@
+.shoppingCart-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .scc-items{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+        height: 70%;
+        overflow-y: auto;
+        .ssci-wrapper{
+            display: flex;
+            padding-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .sc-footer{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+        .scf-total{
+            margin-left: 4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+    .modal-buttons{
+        display: flex;
+        .button-container:last-child {
+            padding-left: 1.5rem;
+        }
+    }
+}

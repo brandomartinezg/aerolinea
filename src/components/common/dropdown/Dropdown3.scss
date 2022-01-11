@@ -1,0 +1,12 @@
+.dropdown-container{
+    height: 3rem;
+    min-width: 15.5rem;
+    border-radius: 0.5rem;
+    margin-left: 1.3rem;
+    .ddc-option{
+        height: 2rem;
+        padding: unset;
+        min-height: unset;
+        font-size: 1rem;
+    }
+}

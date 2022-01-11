@@ -1,0 +1,15 @@
+.flights-container{
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    max-height: 30%;
+    width: 100%;
+    align-items: center;
+    .fc-view{
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+        box-shadow: 0 0.13rem 0.5rem 0 #09090933;
+        width: 60%;
+    }
+}

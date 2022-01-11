@@ -1,0 +1,71 @@
+.rc-calendar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 18.75rem;
+    padding-left: 23%;
+    .rc-c-datetext{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 1.5rem;
+        .rc-c-calendaricon{
+            height: 1rem;
+            width: 1rem;
+            padding-right: 0.5rem;
+        }
+        border: 0.1rem solid gray;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        background-color: white;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    .react-calendar{
+        width: 18.75rem;
+        &.hidden{
+            display: none;
+        }
+    }
+    // .react-calendar{
+    //     width: 21.875rem;
+    //     max-width: 100%;
+    //     background: white;
+    //     border: 1px solid #a0a096;
+    //     font-family: Arial, Helvetica, sans-serif;
+    //     .react-calendar__navigation {
+    //         display: flex;
+    //         height: 2.75rem;
+    //         margin-bottom: 1em;
+    //         button {
+    //             min-width: 2.75rem;
+    //             background: none;
+    //             border: none;
+    //         }
+    //         button[disabled] {
+    //             background-color: #f0f0f0;
+    //         }
+    //     }
+    //     .react-calendar__viewContainer{
+    //         .react-calendar__month-view {
+    //             .react-calendar__month-view__weekdays {
+    //                 text-align: center;
+    //                 text-transform: uppercase;
+    //                 font-weight: bold;
+    //                 font-size: 0.74rem;
+    //                 .react-calendar__month-view__days{
+    //                     button{
+    //                         border: none;
+    //                     }
+    //                 }
+    //             }
+    //             .react-calendar__month-view__days{
+    //                 button{
+    //                     border: none;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}

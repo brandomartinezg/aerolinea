@@ -1,0 +1,85 @@
+@mixin text-style {
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1rem 0rem;
+    color: #606060;
+    display: flex;
+}
+.purchase-container{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    .pc-name{
+        display: flex;
+        flex-direction: column;
+        .pcn-text{
+            @include text-style();
+            .pcn-required{
+                color: red;
+                padding-left: 0.2rem;
+                font-size: 0.8rem;
+            }
+        }
+        .pcn-input{
+            outline: unset;
+            height: 2rem;
+            border:unset;
+            border-bottom: 0.025rem solid #565656;
+        }
+    }
+    .pc-surname{
+        display: flex;
+        flex-direction: column;
+        .pcs-text{
+            @include text-style();
+            .pcs-required{
+                color: red;
+                padding-left: 0.2rem;
+                font-size: 0.8rem;
+            }
+        }
+        .pcs-input{
+            outline: unset;
+            height: 2rem;
+            border:unset;
+            border-bottom: 0.025rem solid #565656;
+        }
+    }
+    .pc-address{
+        display: flex;
+        flex-direction: column;
+        .pca-text{
+            @include text-style();
+            .pca-required{
+                color: red;
+                padding-left: 0.2rem;
+                font-size: 0.8rem;
+            }
+        }
+        .pca-input{
+            outline: unset;
+            height: 2rem;
+            border:unset;
+            border-bottom: 0.025rem solid #565656;
+        }
+    }
+    .pc-email{
+        display: flex;
+        flex-direction: column;
+        .pce-text{
+            @include text-style();
+            .pce-required{
+                color: red;
+                padding-left: 0.2rem;
+                font-size: 0.8rem;
+            }
+        }
+        .pce-input{
+            outline: unset;
+            height: 2rem;
+            border:unset;
+            border-bottom: 0.025rem solid #565656;
+        }
+    }
+}

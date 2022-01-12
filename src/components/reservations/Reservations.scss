@@ -16,22 +16,19 @@
             .rc-destination{
                 height: 100%;
                 padding-left: 23%;
-                @media (min-width:360px) and (max-width: 420px) {
-                    padding-left: 15%;
+                @media screen and (max-width: 768px) {
+                    padding-left: 7%;
+                }
+                @media screen and (max-width:540px) {
+                    padding-bottom: 1rem;
+                }
+                @media screen and (max-width: 420px) {
+                    padding-left: 14%;
                     padding-bottom: 1rem;
                 }
                 @media screen and (max-width: 360px) {
                     padding-left: 10%;
                 }
-                @media screen and (max-width:540px) {
-                    padding-bottom: 1rem;
-                }
-                @media screen and (max-width: 768px) {
-                    padding-left: 7%;
-                }
-            }
-            @media screen and (max-width: 420px) {
-                flex-direction: column;
             }
             @media screen and (max-width:540px) {
                 flex-direction: column;
@@ -41,9 +38,6 @@
             display: flex;
             align-items: flex-start;
             width: 100%;
-            @media screen and (max-width: 420px) {
-                flex-direction: column;
-            }
             @media screen and (max-width:540px) {
                 flex-direction: column;
             }
@@ -62,11 +56,12 @@
         .button-container:first-child{
             padding-right: 3rem;
         }
-        @media screen and (max-width: 420px) {
-            top: 25rem;
-        }
         @media screen and (max-width:540px) {
-            top: 25rem
+            top: 25rem;
+            left: 0.1rem;
+            .button-container:first-child{
+                padding-right: 2.5rem;
+            }
         }
     }
 }

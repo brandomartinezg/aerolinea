@@ -30,9 +30,9 @@ const PeopleSelector = (props, ref) => {
             resetAdults();
             resetChild();
         }
-    }),[counterAdult, counterChildren]);
+    }),[counterAdult, counterChildren,resetAdults,resetChild]);
     return(
-        <div className='people-selector-container' ref={wrapperRef}>
+        <div className={`people-selector-container ${props.openCalendar ? 'hidden': ''}`} ref={wrapperRef}>
             <div onClick={() => setOpenSelector(true)} className='psc-text'>
                 <img src={person} alt='person' className='psc-iconperson'/>
                 {`${counterAdult} Adulto${formatPlural(counterAdult)}`}

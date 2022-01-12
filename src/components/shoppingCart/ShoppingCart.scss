@@ -24,7 +24,8 @@
             margin-bottom: 1rem;
             flex-wrap: wrap;
             @media screen and (max-width: 420px) {
-                flex-wrap: nowrap; 
+                flex-wrap: nowrap;
+                margin-top: 5rem;
             }
             @media screen and (max-width: 540px) {
                 flex-wrap: nowrap;

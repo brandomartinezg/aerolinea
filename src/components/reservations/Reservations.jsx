@@ -12,6 +12,7 @@ const Reservations = ({onSearch, cleanSearch}, ref) => {
     const [originSelected, setOriginSelected] = useState(undefined);
     const [destinationSelected, setDestinationSelected] = useState(undefined);
     const [date, setDate] = useState(new Date());
+    const [openCalendar, setOpenCalendar] = useState(false);
     const refPeopleSelector = useRef(null);
     const refDdOriging = useRef(null);
     const refDdDestination = useRef(null);
@@ -48,8 +49,8 @@ const Reservations = ({onSearch, cleanSearch}, ref) => {
                     </div>
                 </div>
                 <div className='rc-secondfilter'>
-                    <Schedule onChange={(value) => setDate(value)}/>
-                    <PeopleSelector ref={refPeopleSelector}/>
+                    <Schedule onChange={(value) => setDate(value)} setOpenCalendarProp={setOpenCalendar}/>
+                    <PeopleSelector ref={refPeopleSelector} openCalendar={openCalendar}/>
                 </div>
             </div>
             <div className='rc-button'>

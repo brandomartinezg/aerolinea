@@ -5,7 +5,7 @@ import './Schedule.scss';
 import { formatDate } from '../../util/formatter';
 import calendarIcon from '../../icons/calendar.svg';
 
-export const Schedule = ({onChange}) => {
+export const Schedule = ({onChange, setOpenCalendarProp}) => {
     const [value, setValue] = useState(new Date());
     const [openCalendar, setOpenCalendar] = useState(false);
     const wrapperRef = useRef(null);
@@ -15,13 +15,14 @@ export const Schedule = ({onChange}) => {
 		function handleClickOutside(event) {
 			if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
 				setOpenCalendar(false);
+                setOpenCalendarProp(false);
 			}
 		}
 		document.addEventListener('mousedown', handleClickOutside);
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [wrapperRef]);
+	}, [wrapperRef, setOpenCalendarProp]);
     const handleOnChange = value => {
         setValue(value);
         onChange(value);
@@ -29,7 +30,7 @@ export const Schedule = ({onChange}) => {
     return(
         <div className='rc-calendar' ref={wrapperRef}>
             <div>{'Fecha'}</div>
-            <div onClick={() => setOpenCalendar(true)} className='rc-c-datetext'>
+            <div onClick={() => {setOpenCalendar(true); setOpenCalendarProp(true);}} className='rc-c-datetext'>
                 <img src={calendarIcon} alt='calendar' className='rc-c-calendaricon'/>
                 {`${formatDate(value)}`}
             </div>

@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect, useImperativeHandle } from 'react';
 import useInput from '../../hooks/useInput';
 import './PurchaseFormat.scss';
 
-const PurchaseFormat = ({setIsValid}) => {
+const PurchaseFormat = ({setIsValid}, ref) => {
     const [name,isValidName, setName] = useInput();
     const [surname,isValidSurname, setSurname] = useInput();
     const [address,isValidAddress, setAddress] = useInput();
@@ -13,6 +13,17 @@ const PurchaseFormat = ({setIsValid}) => {
         else
             setIsValid(false);
     },[isValidName, isValidSurname, isValidEmail]);
+    useImperativeHandle(ref,() => ({
+        resetInputs: () => {
+            setName('');
+            setSurname('');
+            setAddress('');
+            setEmail('');
+        },
+        getUserData: () => {
+            return {name: name, surname: surname, address: address, email: email}
+        }
+    }),[name,surname, address, email]);
     return(
         <div className='purchase-container'>
             <div className='pc-name'>
@@ -34,4 +45,4 @@ const PurchaseFormat = ({setIsValid}) => {
         </div>
     );
 }
-export default PurchaseFormat;
+export default forwardRef(PurchaseFormat);

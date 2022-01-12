@@ -1,9 +1,9 @@
 import React from 'react'
 import './Header.scss';
-import airplane from '../../icons/airplane.svg';
 import shoppingCart from '../../icons/shopping-cart.svg';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
+import paperAirplane from '../../images/paper-plane.png';
 
 const Header = () => {
     const flightsSelected = useSelector(state => state.selectedFlights);
@@ -11,9 +11,9 @@ const Header = () => {
     return(
         <div className='header-container'>
             <div className='hc-brand-container' onClick={() => navigate('/')}>
-                <img src={airplane} alt='airplane' className='hc-airplane-icon'/>
+                <img src={paperAirplane} alt='airplane' className='hc-airplane-icon'/>
                 <h1 className='hc-text'>
-                    {'Todo destino'}
+                    {'Cennet Air'}
                 </h1>
             </div>
             <div className='hc-shopping-cart-container' onClick={() => navigate('ShoppingCart')}>

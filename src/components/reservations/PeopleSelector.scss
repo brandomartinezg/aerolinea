@@ -1,6 +1,10 @@
 .people-selector-container{
     margin-left: 23%;
     padding-top: 1.4rem;
+    z-index: 4;
+    @media screen and (max-width: 420px) {
+        margin-left: 15%;
+    }
     .psc-text{
         border: 0.1rem solid gray;
         width: 18.6rem;

@@ -8,6 +8,11 @@
     justify-content: space-around;
     height: 4rem;
     align-items: center;
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+        height: 20rem;
+        width: 14rem;
+    }
     div{
         padding: 0.5rem;
         letter-spacing: 0rem;

@@ -7,7 +7,7 @@ import PeopleSelector from './PeopleSelector';
 import './Reservations.scss';
 import Schedule from './Schedule';
 
-const Reservations = ({onSearch}, ref) => {
+const Reservations = ({onSearch, cleanSearch}, ref) => {
     const countries = useSelector(state => state.countries);
     const [originSelected, setOriginSelected] = useState(undefined);
     const [destinationSelected, setDestinationSelected] = useState(undefined);
@@ -22,7 +22,11 @@ const Reservations = ({onSearch}, ref) => {
         getPeopleSelected: () => {
             return refPeopleSelector.current.getPeople()
         },
-        restoreDefault: () => {
+        restoreDefault: () =>{
+            refPeopleSelector.current.resetPeople();
+        },
+        restoreDefaultAll: () => {
+            refPeopleSelector.current.resetPeople();
             setOriginSelected(undefined);
             setDestinationSelected(undefined);
             refDdOriging.current.resetSelection();
@@ -36,28 +40,32 @@ const Reservations = ({onSearch}, ref) => {
                 <div className='rc-filters'>
                     <div className='rc-origin'>
                         <div className='rco-text'>{'Aeropuerto de salida'}</div>
-                        {/* <Input onChange={(e) => setFilterOrigin(e.target.value)}/> */}
                         <Dropdown onSelect={(e) => setOriginSelected(e)} options={countries} ref={refDdOriging} placeholder={'Origen'}/>
                     </div>
                     <div className='rc-destination'>
                         <div className='rcd-text'>{'Aeropuerto de llegada'}</div>
-                        {/* <Input onChange={(e) => setFilterText(e.target.value)}/> */}
                         <Dropdown onSelect={(e) => setDestinationSelected(e)} options={countries} ref={refDdDestination} placeholder={'Destino'}/>
                     </div>
                 </div>
-                {originSelected !== undefined && destinationSelected !== undefined && 
                 <div className='rc-secondfilter'>
                     <Schedule onChange={(value) => setDate(value)}/>
                     <PeopleSelector ref={refPeopleSelector}/>
-                </div>}
+                </div>
             </div>
             <div className='rc-button'>
+                <Button 
+                    color={'tertiary'} 
+                    disabled={originSelected === undefined || destinationSelected === undefined} 
+                    onClick={() => cleanSearch('object')}
+                >
+                    {'Limpiar búsqueda'}
+                </Button>
                 <Button 
                     onClick={(e) => handleOnSearch(e)} 
                     color={'primary'} 
                     disabled={originSelected === undefined || destinationSelected === undefined}
                 >
-                    {'Buscar...'}
+                    {'Buscar'}
                 </Button>
             </div>
         </div>

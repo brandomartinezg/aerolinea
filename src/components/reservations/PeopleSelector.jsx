@@ -9,8 +9,8 @@ import { formatPlural } from '../../util/formatter';
 const PeopleSelector = (props, ref) => {
     const [openSelector, setOpenSelector] = useState(false);
     const wrapperRef = useRef(null);
-    const [counterAdult, incrementAdult, decrementAdult] = useCounter();
-    const [counterChildren, incrementChildren, decrementChildren, hasChildren, hasChild] = useCounter(0);
+    const [counterAdult, incrementAdult, decrementAdult, resetAdults] = useCounter();
+    const [counterChildren, incrementChildren, decrementChildren,resetChild, hasChild] = useCounter(0);
     useEffect(() => {
 		function handleClickOutside(event) {
 			if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -25,6 +25,10 @@ const PeopleSelector = (props, ref) => {
     useImperativeHandle(ref,() => ({
         getPeople: () => {
             return {adults: counterAdult, children: counterChildren}
+        },
+        resetPeople: () => {
+            resetAdults();
+            resetChild();
         }
     }),[counterAdult, counterChildren]);
     return(

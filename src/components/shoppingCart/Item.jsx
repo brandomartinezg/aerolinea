@@ -27,7 +27,7 @@ const Item = ({origin, destination, date, travellers, price, currency, id, onDel
             </div>
             <div className='ic-actions'>
                 <Button color={'tertiary'} onClick={() => onDelete(id)}>{'Eliminar'}</Button>
-                <Button color={'secondary'} onClick={() => onBuy(id)}>{'Comprar'}</Button>
+                <Button color={'primary'} onClick={() => onBuy(id)}>{'Comprar'}</Button>
             </div>
         </div>
     );

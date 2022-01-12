@@ -1,4 +1,7 @@
-import { cleanSelectedFlightsAction, deleteSeletedFlightAction, setCountriesAction, setSelectedFlightAction } from "../constants/actions";
+import { 
+    cleanSelectedFlightsAction, deleteSeletedFlightAction, 
+    setCountriesAction, setSelectedFlightAction, setUserDataAction, UpdateSelectedFlightAction 
+} from "../constants/actions";
 export const setCountries = payload => ({
     type: setCountriesAction,
     payload
@@ -14,4 +17,14 @@ export const deleteSeletedFlight = payload => ({
 });
 export const cleanSelectedFlights = () => ({
     type: cleanSelectedFlightsAction
+});
+
+export const updateSelectedFlight = payload => ({
+    type: UpdateSelectedFlightAction,
+    payload
+});
+
+export const setUserData = payload => ({
+    type: setUserDataAction,
+    payload
 });

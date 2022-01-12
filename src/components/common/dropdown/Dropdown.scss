@@ -21,6 +21,8 @@
 		z-index: 99;
         top: 3rem;
         width: 18.75rem;
+        height: 12rem;
+        overflow-y: auto;
         .option-container{
             position: relative;
             height: 2rem;
@@ -41,7 +43,7 @@
             }
             &:hover{
                 cursor: pointer;
-                background-color: #60f2ea;
+                background-color: #f9f3e3;
             }
         }
         &.hidden{

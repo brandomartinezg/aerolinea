@@ -5,6 +5,7 @@
     align-items: center;
     border-bottom: 0.1rem solid gray;
     justify-content: space-between;
+    background-color: #f9f3e3;
     .hc-brand-container{
         display: flex;
         align-items: center;
@@ -18,9 +19,12 @@
             }
         }
         .hc-text{
-            color: #0096FA;
+            //color: skyblue;
             // width: 70%; solo movil
-            font-family: Lato,sans-serif;
+            font-size: 2.5rem;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            // font-style: italic;
             &:hover{
                 cursor: pointer;
             }
@@ -39,7 +43,7 @@
             width: 1.3rem;
             height: 1.3rem;
             border-radius: 50%;
-            background-color: red;
+            background-color: #bc2541;
             margin-right: 2rem;
             display: flex;
             justify-content: center;

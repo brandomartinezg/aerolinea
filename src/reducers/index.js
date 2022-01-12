@@ -1,8 +1,9 @@
-import { cleanSelectedFlightsAction, deleteSeletedFlightAction, setCountriesAction, setSelectedFlightAction } from "../constants/actions";
+import { cleanSelectedFlightsAction, deleteSeletedFlightAction, setCountriesAction, setSelectedFlightAction, setUserDataAction, UpdateSelectedFlightAction } from "../constants/actions";
 
 const initialState = {
     countries: [],
-    selectedFlights:[]
+    selectedFlights:[],
+    userData: undefined
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -26,6 +27,23 @@ const rootReducer = (state = initialState, action) => {
             return{
                 ...state,
                 selectedFlights: []
+            }
+        case UpdateSelectedFlightAction:
+            return{
+                ...state,
+                selectedFlights: [...state.selectedFlights.map(item => {
+                    if(item.id !== action.payload.id)
+                        return item;
+                    return{
+                        ...item,
+                        ...action.payload
+                    }
+                })]
+            }
+        case setUserDataAction:
+            return{
+                ...state,
+                userData: action.payload
             }
         default:
             return state

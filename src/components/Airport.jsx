@@ -1,15 +1,20 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { useDispatch } from 'react-redux';
-import { setCountries, setSelectedFlight } from '../actions';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCountries, setSelectedFlight, updateSelectedFlight } from '../actions';
 import './Airport.scss';
+import Button from './common/button/Button';
+import Modal, { ModalFooter, ModalHeader } from './common/modal/Modal';
 import Flights from './flights/Flights';
 import Reservations from './reservations/Reservations';
 
 const Airport = () => {
     const dispatch = useDispatch();
-    const [flights, setFlights] = useState([]);
+    const [flights, setFlights] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const flightsSelected = useSelector(state => state.selectedFlights);
     const refReservation = useRef(null);
     const today = new Date();
+    const [isUpdate, setIsUpdate] = useState(false);
     const mockdestinations = [
         {id:1, name:"Ciudad de México"},
         {id:2, name: "Aguascalientes"},
@@ -59,14 +64,36 @@ const Airport = () => {
     }, []);
     const handleOnSelect= (item) => {
         item.people = refReservation.current.getPeopleSelected();
-        dispatch(setSelectedFlight(item));
+        const flightSelected = flightsSelected.find(c => c.id === item.id);
+        if(flightSelected !== undefined){
+            dispatch(updateSelectedFlight(item));
+            setIsUpdate(true);
+        }
+        else{
+            dispatch(setSelectedFlight(item));
+            setIsUpdate(false);
+        }
         refReservation.current.restoreDefault();
-        setFlights([]);
+        setShowModal(true);
+    }
+    const handleCleanSearch = () => {
+        refReservation.current.restoreDefaultAll();
+        setFlights(null);
     }
     return(
         <div className='airport-container'>
-            <Reservations onSearch={onSearch} ref={refReservation}/>
+            <Reservations onSearch={onSearch} cleanSearch={handleCleanSearch} ref={refReservation}/>
             <Flights flights={flights} onSelect={handleOnSelect}/>
+            <Modal show={showModal} setShow={setShowModal}>
+                <ModalHeader>
+                    {isUpdate ? 'La reserva del vuelo se actualizó': 'El vuelo se guardó en tu carrito'}
+                </ModalHeader>
+                <ModalFooter>
+                    <div className='button-footer'>
+                        <Button color={'primary'} onClick={() => setShowModal(false)}>{'Aceptar'}</Button>
+                    </div>
+                </ModalFooter>
+            </Modal>
         </div>
     );
 }

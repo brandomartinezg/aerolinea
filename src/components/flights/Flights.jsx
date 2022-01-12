@@ -4,12 +4,9 @@ import Card from './Card';
 import './Flights.scss';
 
 const Flights = ({flights, onSelect}) => {
-    // const onSelect = (e) => console.log('object');
-    // const flightsFilters = useLocation();
-    // flightsFilters.state
     return(
         <div className='flights-container'>
-            {flights.map(f => {
+            {flights && (flights.length !== 0 ? flights.map(f => {
                 const [year, month, day] = f.date;
                 const [hour, minutes] = f.hour;
                 const [arrivalHour, arrivalMinutes] = f.arrivalTime;
@@ -28,7 +25,7 @@ const Flights = ({flights, onSelect}) => {
                         />
                     </div>
                 );
-            })}
+            }): <div className='fc-noitems'>{'No hay vuelos disponibles para los criterios de búsqueda'}</div>)}
         </div>
     );
 }

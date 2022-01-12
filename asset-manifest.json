@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.cdd1eead.css",
-    "main.js": "/static/js/main.a23dff23.js",
-    "static/js/787.a44806e2.chunk.js": "/static/js/787.a44806e2.chunk.js",
-    "static/media/paper-plane.png": "/static/media/paper-plane.c56a1b03d502e4c01bbf.png",
-    "static/media/calendar.svg": "/static/media/calendar.1e782aa664a611fb05086ebbb9edf8d6.svg",
-    "static/media/shopping-cart.svg": "/static/media/shopping-cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
-    "static/media/minus.svg": "/static/media/minus.878cea233f08ae4f127c6d4499f6a02a.svg",
-    "static/media/plus.svg": "/static/media/plus.8188a27277b2079fa57cd1529b0f7433.svg",
-    "index.html": "/index.html",
-    "static/media/person.svg": "/static/media/person.e0900bae432d8be5cefaf7c68d0d100c.svg",
-    "main.cdd1eead.css.map": "/static/css/main.cdd1eead.css.map",
-    "main.a23dff23.js.map": "/static/js/main.a23dff23.js.map",
-    "787.a44806e2.chunk.js.map": "/static/js/787.a44806e2.chunk.js.map"
+    "main.css": "/aerolinea/static/css/main.7da91d98.css",
+    "main.js": "/aerolinea/static/js/main.b6c8a8bc.js",
+    "static/js/787.a44806e2.chunk.js": "/aerolinea/static/js/787.a44806e2.chunk.js",
+    "static/media/paper-plane.png": "/aerolinea/static/media/paper-plane.c56a1b03d502e4c01bbf.png",
+    "static/media/calendar.svg": "/aerolinea/static/media/calendar.1e782aa664a611fb05086ebbb9edf8d6.svg",
+    "static/media/shopping-cart.svg": "/aerolinea/static/media/shopping-cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
+    "static/media/minus.svg": "/aerolinea/static/media/minus.878cea233f08ae4f127c6d4499f6a02a.svg",
+    "static/media/plus.svg": "/aerolinea/static/media/plus.8188a27277b2079fa57cd1529b0f7433.svg",
+    "index.html": "/aerolinea/index.html",
+    "static/media/person.svg": "/aerolinea/static/media/person.e0900bae432d8be5cefaf7c68d0d100c.svg",
+    "main.7da91d98.css.map": "/aerolinea/static/css/main.7da91d98.css.map",
+    "main.b6c8a8bc.js.map": "/aerolinea/static/js/main.b6c8a8bc.js.map",
+    "787.a44806e2.chunk.js.map": "/aerolinea/static/js/787.a44806e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdd1eead.css",
-    "static/js/main.a23dff23.js"
+    "static/css/main.7da91d98.css",
+    "static/js/main.b6c8a8bc.js"
   ]
 }

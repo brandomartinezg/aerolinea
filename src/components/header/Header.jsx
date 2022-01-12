@@ -10,7 +10,7 @@ const Header = () => {
     const navigate = useNavigate();
     return(
         <div className='header-container'>
-            <div className='hc-brand-container' onClick={() => navigate('/')}>
+            <div className='hc-brand-container' onClick={() => navigate('/aerolinea')}>
                 <img src={paperAirplane} alt='airplane' className='hc-airplane-icon'/>
                 <h1 className='hc-text'>
                     {'Cennet Air'}

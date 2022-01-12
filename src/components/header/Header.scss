@@ -11,20 +11,19 @@
         align-items: center;
         .hc-airplane-icon{
             height: 3rem;
-            // width: 30%;solo movil
             padding-right: 1rem;
             padding-left: 3rem;
             &:hover{
                 cursor: pointer;
             }
+            @media screen and (max-width: 420px) {
+                padding-left: 1rem;
+            }
         }
         .hc-text{
-            //color: skyblue;
-            // width: 70%; solo movil
             font-size: 2.5rem;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: bold;
-            // font-style: italic;
             &:hover{
                 cursor: pointer;
             }

@@ -4,8 +4,14 @@
     flex-direction: column;
     width: 18.75rem;
     padding-left: 23%;
-    @media screen and (max-width: 420px) {
+    @media (min-width:360px) and (max-width: 420px) {
         padding-left: 15%;
+    }
+    @media screen and (max-width: 360px) {
+        padding-left: 10%;
+    }
+    @media screen and (max-width: 768px) {
+        padding-left: 7%;
     }
     .rc-c-datetext{
         display: flex;

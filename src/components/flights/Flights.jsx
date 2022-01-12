@@ -25,7 +25,7 @@ const Flights = ({flights, onSelect}) => {
                         />
                     </div>
                 );
-            }): <div className='fc-noitems'>{'No hay vuelos disponibles para los criterios de búsqueda'}</div>)}
+            }): <div className='fc-noitems'>{'No hay vuelos disponibles para los criterios de búsqueda.'}</div>)}
         </div>
     );
 }

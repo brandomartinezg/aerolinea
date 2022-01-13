@@ -41,11 +41,11 @@ const Reservations = ({onSearch, cleanSearch}, ref) => {
                 <div className='rc-filters'>
                     <div className='rc-origin'>
                         <div className='rco-text'>{'Aeropuerto de salida'}</div>
-                        <Dropdown onSelect={(e) => setOriginSelected(e)} options={countries} ref={refDdOriging} placeholder={'Origen'}/>
+                        <Dropdown disabled={countries.length === 0} onSelect={(e) => setOriginSelected(e)} options={countries} ref={refDdOriging} placeholder={'Origen'}/>
                     </div>
                     <div className='rc-destination'>
                         <div className='rcd-text'>{'Aeropuerto de llegada'}</div>
-                        <Dropdown onSelect={(e) => setDestinationSelected(e)} options={countries} ref={refDdDestination} placeholder={'Destino'}/>
+                        <Dropdown disabled={countries.length === 0} onSelect={(e) => setDestinationSelected(e)} options={countries} ref={refDdDestination} placeholder={'Destino'}/>
                     </div>
                 </div>
                 <div className='rc-secondfilter'>

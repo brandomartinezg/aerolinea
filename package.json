@@ -26,7 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -48,6 +48,25 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "babel-jest": "^27.4.6",
+    "enzyme": "^3.11.0",
+    "gh-pages": "^3.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.7",
+    "react-test-renderer": "^17.0.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "./src/__test__/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
   }
 }

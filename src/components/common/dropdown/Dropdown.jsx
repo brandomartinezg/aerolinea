@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } f
 import useFilter from '../../../hooks/useFilter';
 import './Dropdown.scss';
 
-const Dropdown = ({options, onSelect, placeholder}, ref) => {
+const Dropdown = ({options, onSelect, placeholder, disabled}, ref) => {
     const [selection, setSelection] = useState(undefined);
     const [arreyFiltered, setArrayFiltered] = useFilter(options, 'name');
     const [openDropDown, setOpenDropdown] = useState(false);
@@ -33,7 +33,7 @@ const Dropdown = ({options, onSelect, placeholder}, ref) => {
         }
     }),[]);
     return(
-        <div className='dropdown-container' ref={wrapperRef}>
+        <div className={`dropdown-container ${disabled ? 'disabled':''}`} ref={wrapperRef}>
             <input 
                 type={'text'} 
                 value={selection && selection.name} 
@@ -41,6 +41,7 @@ const Dropdown = ({options, onSelect, placeholder}, ref) => {
                 placeholder={placeholder}
                 className='ddc-input'
                 onClick={() => setOpenDropdown(true)}
+                disabled={disabled}
             />
             <div className={`ddc-options ${openDropDown ? '': 'hidden'}`}>
                 {arreyFiltered.map(item => (

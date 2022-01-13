@@ -2,11 +2,11 @@
     margin-left: 23%;
     padding-top: 1.4rem;
     z-index: 4;
-    &.hidden{
-        opacity: 0;
-    }
     @media screen and (max-width: 768px) {
         margin-left: 7%;
+        &.hidden{
+            opacity: 0;
+        }
     }
     @media screen and (max-width: 420px) {
         margin-left: 14%;

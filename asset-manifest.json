@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/aerolinea/static/css/main.5089a776.css",
-    "main.js": "/aerolinea/static/js/main.c51446f1.js",
+    "main.css": "/aerolinea/static/css/main.e00bc62c.css",
+    "main.js": "/aerolinea/static/js/main.2eff1ef8.js",
     "static/js/787.a44806e2.chunk.js": "/aerolinea/static/js/787.a44806e2.chunk.js",
     "static/media/paper-plane.png": "/aerolinea/static/media/paper-plane.c56a1b03d502e4c01bbf.png",
+    "static/media/404NotFound.jpg": "/aerolinea/static/media/404NotFound.f89d9088aa5714480b8f.jpg",
     "static/media/calendar.svg": "/aerolinea/static/media/calendar.1e782aa664a611fb05086ebbb9edf8d6.svg",
     "static/media/shopping-cart.svg": "/aerolinea/static/media/shopping-cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "static/media/minus.svg": "/aerolinea/static/media/minus.878cea233f08ae4f127c6d4499f6a02a.svg",
     "static/media/plus.svg": "/aerolinea/static/media/plus.8188a27277b2079fa57cd1529b0f7433.svg",
     "index.html": "/aerolinea/index.html",
     "static/media/person.svg": "/aerolinea/static/media/person.e0900bae432d8be5cefaf7c68d0d100c.svg",
-    "main.5089a776.css.map": "/aerolinea/static/css/main.5089a776.css.map",
-    "main.c51446f1.js.map": "/aerolinea/static/js/main.c51446f1.js.map",
+    "main.e00bc62c.css.map": "/aerolinea/static/css/main.e00bc62c.css.map",
+    "main.2eff1ef8.js.map": "/aerolinea/static/js/main.2eff1ef8.js.map",
     "787.a44806e2.chunk.js.map": "/aerolinea/static/js/787.a44806e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5089a776.css",
-    "static/js/main.c51446f1.js"
+    "static/css/main.e00bc62c.css",
+    "static/js/main.2eff1ef8.js"
   ]
 }

@@ -1,6 +1,6 @@
 # Como ejecutar el proyecto
 
-Una vez que se tiene el repositorio de manera local, solo basta con hacer un npn install para que el gestor de paquetes descargue las dependendencias necesarias para el proyecto
+Una vez que se tiene el repositorio de manera local, solo basta con hacer un `npn install` para que el gestor de paquetes descargue las dependendencias necesarias para el proyecto
 
 # Scripts disponibles
 

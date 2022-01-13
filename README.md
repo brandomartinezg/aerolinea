@@ -18,3 +18,6 @@ Se obtiene el compilado de la interfaz listo para ser colocado en un servidor we
 
 Este comando obtiene un compilado y lo publica en git hub pages, la configuración depende del archivo package.json en la propiedad homepage
 
+### `npm run test`
+
+Este comando corre las pruebas de jest y obtiene los archivos visuales de la covertura de código
